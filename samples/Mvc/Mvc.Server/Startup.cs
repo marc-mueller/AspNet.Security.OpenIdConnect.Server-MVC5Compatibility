@@ -123,6 +123,15 @@ namespace Mvc.Server {
                     Secret = "secret_secret_secret"
                 });
 
+                database.Applications.Add(new Application
+                {
+                    ApplicationID = "myClientMvc5",
+                    DisplayName = "My client application V5",
+                    RedirectUri = "http://localhost:9664/oidc",
+                    LogoutRedirectUri = "http://localhost:9664/",
+                    Secret = "secret_secret_secret2"
+                });
+
                 database.SaveChanges();
             }
         }
